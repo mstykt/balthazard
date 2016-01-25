@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<title>Balthazard Formülü</title>
+</h:head>
+<body>
+	<h:outputScript library="js" name="bootstrap.min.js" />
+	<h:outputScript library="js" name="jquery-1.11.3.min.js" />
+	<h:outputStylesheet library="css" name="bootstrap-theme.min.css" />
+	<h:outputStylesheet library="css" name="bootstrap.min.css" />
+	
+	<nav id="myNavbar"
+		class="navbar navbar-default navbar-inverse navbar-fixed-top"
+		role="navigation"> <!-- Brand and toggle get grouped for better mobile display -->
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse"
+				data-target="#navbarCollapse">
+				<span class="sr-only">Toggle navigation</span> <span
+					class="icon-bar"></span> <span class="icon-bar"></span> <span
+					class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#">Balthazard Fotmülü</a>
+		</div>
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="navbarCollapse">
+			<ul class="nav navbar-nav">
+				<li class="active"><p:link value="Anasayfa" outcome="index" />
+				</li>
+				<li><p:link value="Hakkında" outcome="hakkinda" /></li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+	<div class="jumbotron">
+		<div class="ui-fluid">
+			<h:form>
+				<p:panelGrid columns="4" columnClasses="ui-grid-col-2,ui-grid-col-3"
+					layout="grid" styleClass="ui-panelgrid-blank">
+					<f:facet name="header">
+						<p:outputLabel value="Balthazard Formülü" />
+					</f:facet>
+
+
+					<p:outputLabel for="kulakBurunBogaz" value="Kulak Burun Boğaz:" />
+					<p:inputText id="kulakBurunBogaz"
+						value="#{balthazardMB.hastalik.kulakBurunBogaz}" required="true">
+						<f:validateLength maximum="2" />
+					</p:inputText>
+
+					<p:outputLabel for="urogenital" value="Ürogenital(İdrar Yolları):" />
+					<p:inputText id="urogenital"
+						value="#{balthazardMB.hastalik.urogenital}" required="true">
+						<f:validateLength maximum="2" />
+					</p:inputText>
+
+					<p:outputLabel for="zihinselRuhsal" value="Zihinsel Ruhsal:" />
+					<p:inputText id="zihinselRuhsal"
+						value="#{balthazardMB.hastalik.zihinselRuhsal}" required="true">
+						<f:validateLength maximum="2" />
+					</p:inputText>
+
+					<p:outputLabel for="hormonal" value="Hormonal(Endokrin):" />
+					<p:inputText id="hormonal"
+						value="#{balthazardMB.hastalik.hormonal}" required="true">
+						<f:validateLength maximum="2" />
+					</p:inputText>
+
+					<p:outputLabel for="deri" value="Deri(Cilt):" />
+					<p:inputText id="deri" value="#{balthazardMB.hastalik.deri}"
+						required="true">
+						<f:validateLength maximum="2" />
+					</p:inputText>
+
+					<p:outputLabel for="solunum" value="Solunum:" />
+					<p:inputText id="solunum" value="#{balthazardMB.hastalik.solunum}"
+						required="true">
+						<f:validateLength maximum="2" />
+					</p:inputText>
+
+					<p:outputLabel for="hemopoetik" value="Hemopoetik(Kan):" />
+					<p:inputText id="hemopoetik"
+						value="#{balthazardMB.hastalik.hemopoetik}" required="true">
+						<f:validateLength maximum="2" />
+					</p:inputText>
+
+					<p:outputLabel for="yaniklar" value="Yanıklar:" />
+					<p:inputText id="yaniklar"
+						value="#{balthazardMB.hastalik.yaniklar}" required="true">
+						<f:validateLength maximum="2" />
+					</p:inputText>
+
+					<p:outputLabel for="kardiyovaskuler"
+						value="Kalp - Damar(Kardiyo.):" />
+					<p:inputText id="kardiyovaskuler"
+						value="#{balthazardMB.hastalik.kardiyovaskuler}" required="true">
+						<f:validateLength maximum="2" />
+					</p:inputText>
+
+					<p:outputLabel for="onkoloji" value="Onkoloji(Kanser):" />
+					<p:inputText id="onkoloji"
+						value="#{balthazardMB.hastalik.onkoloji}" required="true">
+						<f:validateLength maximum="2" />
+					</p:inputText>
+
+					<p:outputLabel for="gorme" value="Görme:" />
+					<p:inputText id="gorme" value="#{balthazardMB.hastalik.gorme}"
+						required="true">
+						<f:validateLength maximum="2" />
+					</p:inputText>
+
+					<p:outputLabel for="sinir" value="Sinir:" />
+					<p:inputText id="sinir" value="#{balthazardMB.hastalik.sinir}"
+						required="true">
+						<f:validateLength maximum="2" />
+					</p:inputText>
+
+					<p:outputLabel for="sindirim" value="Sindirim:" />
+					<p:inputText id="sindirim"
+						value="#{balthazardMB.hastalik.sindirim}" required="true">
+						<f:validateLength maximum="2" />
+					</p:inputText>
+
+					<p:outputLabel for="kasIskelet" value="Kas - Iskelet:" />
+					<p:inputText id="kasIskelet"
+						value="#{balthazardMB.hastalik.kasIskelet}" required="true">
+						<f:validateLength maximum="2" />
+					</p:inputText>
+
+					<p:outputLabel for="kadinDogum" value="Kadın - Doğum:" />
+					<p:inputText id="kadinDogum"
+						value="#{balthazardMB.hastalik.kadinDogum}" required="true">
+						<f:validateLength maximum="2" />
+					</p:inputText>
+
+					<p:outputLabel for="diger" value="Diğer:" />
+					<p:inputText id="diger" value="#{balthazardMB.hastalik.diger}"
+						required="true">
+						<f:validateLength maximum="2" />
+					</p:inputText>
+
+					<p:outputLabel for="altmisbesYas" value="65 Yaş Üstü:" />
+					<p:selectBooleanCheckbox id="altmisbesYas"
+						value="#{balthazardMB.altmisYas}" />
+
+
+					<p:commandButton value="Hesapla" process="@form" update="@form"
+						actionListener="#{balthazardMB.hesapla()}" />
+					<p:commandButton value="Temizle" process="@form" update="@form"
+						actionListener="#{balthazardMB.temizle()}" />
+				</p:panelGrid>
+				<br />
+				<br />
+				<h:outputText id="sonuc" rendered="#{balthazardMB.sonucRender}"
+					value="Toplam Engel Oranı: % #{balthazardMB.sonuc} olarak hesaplanmıştır." />
+			</h:form>
+			<p:outputLabel rendered="" value="" />
+		</div>
+
+	</div>
+	<div class="container-fluid">
+		<div class="row"></div>
+		<hr />
+		<div class="row">
+			<div class="col-xs-12">
+				<footer>
+				<p></p>
+				</footer>
+			</div>
+		</div>
+	</div>
+
+
+</body>
+</html>
