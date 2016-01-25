@@ -1,0 +1,10 @@
+{
+  "name": "balthazard",
+  "scripts": {
+  },
+  "env": {
+  },
+  "addons": [
+    "heroku-postgresql"
+  ]
+}
